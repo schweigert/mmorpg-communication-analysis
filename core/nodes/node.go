@@ -1,10 +1,15 @@
 package nodes
 
+import "time"
+
 // Node interface store all node methods
 type Node interface {
-	Attach(nodes ...Node)
-	Children() []Node
 	Init()
+	Update(deltaTime time.Duration)
+
+	Attach(nodes ...Node)
+	Disinherit(node Node)
+	Children() []Node
 }
 
 // NewBaseNode instance a new BaseNode

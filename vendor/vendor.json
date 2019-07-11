@@ -1,6 +1,43 @@
 {
 	"comment": "",
 	"ignore": "test",
-	"package": [],
+	"package": [
+		{
+			"checksumSHA1": "CSPbwbyzqA6sfORicn4HFtIhF/c=",
+			"path": "github.com/davecgh/go-spew/spew",
+			"revision": "d8f796af33cc11cb798c1aaeb27a4ebc5099927d",
+			"revisionTime": "2018-08-30T19:11:22Z"
+		},
+		{
+			"checksumSHA1": "Vru9FM9G8dT3nvZGvhfkEqkApNM=",
+			"path": "github.com/krakenlab/gspec",
+			"revision": "40a59e718d9feecd0bc80b3e625053ee1f8ba1c3",
+			"revisionTime": "2019-05-18T18:08:52Z"
+		},
+		{
+			"checksumSHA1": "LuFv4/jlrmFNnDb/5SCSEPAM9vU=",
+			"path": "github.com/pmezard/go-difflib/difflib",
+			"revision": "5d4384ee4fb2527b0a1256a821ebfc92f91efefc",
+			"revisionTime": "2018-12-26T10:54:42Z"
+		},
+		{
+			"checksumSHA1": "d2c1LNsKWhNv3MqHr85G1yycQHc=",
+			"path": "github.com/stretchr/testify/assert",
+			"revision": "d84e815d441de9c64a3a2f9336c32acf1e7349d1",
+			"revisionTime": "2019-01-31T00:33:30Z"
+		},
+		{
+			"checksumSHA1": "eYhTfLio8LIbMxuNtKB0z3XpVB0=",
+			"path": "github.com/stretchr/testify/require",
+			"revision": "d84e815d441de9c64a3a2f9336c32acf1e7349d1",
+			"revisionTime": "2019-01-31T00:33:30Z"
+		},
+		{
+			"checksumSHA1": "lIp4dQzfVYRQARgsmRm3h3wRFgs=",
+			"path": "github.com/stretchr/testify/suite",
+			"revision": "d84e815d441de9c64a3a2f9336c32acf1e7349d1",
+			"revisionTime": "2019-01-31T00:33:30Z"
+		}
+	],
 	"rootPath": "github.com/schweigert/mmorpg-communication-analysis"
 }

@@ -14,11 +14,8 @@ func (suite *PackageSuite) SetupTest() {
 	suite.Suite.SetupTest()
 }
 
-func (suite *PackageSuite) TestNewHierarchicalNode() {
-	node := NewHierarchicalNode()
-
-	suite.NotNil(node)
-	suite.NotPanics(func() { node.Update(0.0) })
+func (suite *PackageSuite) TestNewBaseNode() {
+	suite.NotNil(NewBaseNode())
 }
 
 func TestPackageSuite(t *testing.T) {

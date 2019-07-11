@@ -1,15 +1,16 @@
 package nodes
 
-import "time"
-
-// Node interface
+// Node interface store all node methods
 type Node interface {
+	Attach(nodes ...Node)
 	Children() []Node
-	Update(deltaTime time.Duration)
-	Attach(newChildren ...Node)
 }
 
-// NewHierarchicalNode create a tree based node
-func NewHierarchicalNode() Node {
-	return &HierarchicalNode{children: []Node{}}
+// NewBaseNode instance a new BaseNode
+func NewBaseNode(children ...Node) Node {
+	if children == nil {
+		children = []Node{}
+	}
+
+	return &BaseNode{children: children}
 }

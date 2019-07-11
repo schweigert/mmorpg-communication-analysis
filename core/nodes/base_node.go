@@ -8,6 +8,13 @@ type BaseNode struct {
 	childrenMutex sync.Mutex
 }
 
+// Init children and this node
+func (node *BaseNode) Init() {
+	for _, child := range node.Children() {
+		child.Init()
+	}
+}
+
 // Children of this node
 func (node *BaseNode) Children() []Node {
 	node.childrenMutex.Lock()

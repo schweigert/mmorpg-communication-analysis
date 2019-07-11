@@ -4,6 +4,7 @@ package nodes
 type Node interface {
 	Attach(nodes ...Node)
 	Children() []Node
+	Init()
 }
 
 // NewBaseNode instance a new BaseNode

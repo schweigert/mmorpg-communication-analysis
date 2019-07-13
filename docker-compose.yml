@@ -29,6 +29,7 @@ services:
       command: rwebservice
       environment:
         - SERVICE_NAME=rwebservice
+
     sauthservice:
       build:
         context: .
@@ -57,6 +58,7 @@ services:
       command: swebservice
       environment:
         - SERVICE_NAME=swebservice
+
     wauthservice:
       build:
         context: .

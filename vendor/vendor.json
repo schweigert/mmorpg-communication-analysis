@@ -75,6 +75,12 @@
 			"revisionTime": "2019-05-18T18:08:52Z"
 		},
 		{
+			"checksumSHA1": "vm7jiY0BIHk+YtfjoHKY+Vd/kCU=",
+			"path": "github.com/krakenlab/ternary",
+			"revision": "ca548fdf1c0dc0aa5f10a5080456dd2f6c1041fe",
+			"revisionTime": "2019-05-23T13:55:10Z"
+		},
+		{
 			"checksumSHA1": "74gCzvJiE6bXX3i4vIVCYhffDHc=",
 			"path": "github.com/mattn/go-isatty",
 			"revision": "da60ac76bf7019a8b005f8dd1ad9d1a0e6434155",

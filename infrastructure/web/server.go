@@ -5,6 +5,7 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/schweigert/mmorpg-communication-analysis/infrastructure/env"
+	"github.com/schweigert/mmorpg-communication-analysis/infrastructure/envbuilder"
 )
 
 // Server create a default structure for all webservices
@@ -15,6 +16,11 @@ type Server struct {
 // Setup root route in this server
 func (server *Server) Setup() {
 	server.engine.GET(RootRoute, server.Get)
+}
+
+// Start this server
+func (server *Server) Start() {
+	panic(server.engine.Run(envbuilder.GinAddr()))
 }
 
 // Get root

@@ -2,6 +2,7 @@ package web
 
 import (
 	"net/http"
+	"os"
 	"testing"
 
 	"github.com/schweigert/mmorpg-communication-analysis/infrastructure/env"
@@ -20,6 +21,15 @@ func (suite *ServerTest) SetupTest() {
 
 	suite.Server = NewServer()
 	suite.WebSuite.Server = suite.Server.engine
+}
+
+func (suite *ServerTest) TestStart() {
+	os.Setenv("PORT", "-1")
+	defer os.Setenv("PORT", "")
+
+	suite.Panics(func() {
+		suite.Server.Start()
+	})
 }
 
 func (suite *ServerTest) TestGet() {

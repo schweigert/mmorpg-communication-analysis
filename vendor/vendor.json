@@ -3,6 +3,18 @@
 	"ignore": "test",
 	"package": [
 		{
+			"checksumSHA1": "ZJ4F6ow8timkUZMyv09NAspC6d8=",
+			"path": "github.com/brianvoe/gofakeit",
+			"revision": "57653968c18b7b13e248eb851e0084ae758d5073",
+			"revisionTime": "2019-06-24T16:02:31Z"
+		},
+		{
+			"checksumSHA1": "8NZuYlKmryu69WMnROWyKzcBW9s=",
+			"path": "github.com/brianvoe/gofakeit/data",
+			"revision": "57653968c18b7b13e248eb851e0084ae758d5073",
+			"revisionTime": "2019-06-24T16:02:31Z"
+		},
+		{
 			"checksumSHA1": "CSPbwbyzqA6sfORicn4HFtIhF/c=",
 			"path": "github.com/davecgh/go-spew/spew",
 			"revision": "d8f796af33cc11cb798c1aaeb27a4ebc5099927d",

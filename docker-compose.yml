@@ -1,0 +1,10 @@
+version: '3.5'
+
+services:
+    rauthservice:
+      build:
+        context: .
+        dockerfile: Dockerfile
+      command: rauthservice
+      environment:
+        - SERVICE_NAME=rauthservice

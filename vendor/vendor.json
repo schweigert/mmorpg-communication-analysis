@@ -57,6 +57,24 @@
 			"revisionTime": "2019-07-01T18:22:01Z"
 		},
 		{
+			"checksumSHA1": "YzIVWHj5vDlCp3A8Zy0vhCn4zZ0=",
+			"path": "github.com/jinzhu/gorm",
+			"revision": "836fb2c19d84dac7b0272958dfb9af7cf0d0ade4",
+			"revisionTime": "2019-06-30T07:50:19Z"
+		},
+		{
+			"checksumSHA1": "0Pry12nZ6UQBd1iXEtszySSfFpI=",
+			"path": "github.com/jinzhu/gorm/dialects/postgres",
+			"revision": "836fb2c19d84dac7b0272958dfb9af7cf0d0ade4",
+			"revisionTime": "2019-06-30T07:50:19Z"
+		},
+		{
+			"checksumSHA1": "iqeSAF7imnVsW+iqLqf6kkYn1VU=",
+			"path": "github.com/jinzhu/inflection",
+			"revision": "f5c5f50e6090ae76a29240b61ae2a90dd810112e",
+			"revisionTime": "2019-06-03T04:28:36Z"
+		},
+		{
 			"checksumSHA1": "4DgEcOv2o9NyZAHCbdS76mToqpU=",
 			"path": "github.com/json-iterator/go",
 			"revision": "27518f6661eba504be5a7a9a9f6d9460d892ade3",
@@ -79,6 +97,30 @@
 			"path": "github.com/krakenlab/ternary",
 			"revision": "ca548fdf1c0dc0aa5f10a5080456dd2f6c1041fe",
 			"revisionTime": "2019-05-23T13:55:10Z"
+		},
+		{
+			"checksumSHA1": "F6mCaMfANCOCP8pLnk94HmRyVpg=",
+			"path": "github.com/lib/pq",
+			"revision": "2ff3cb3adc01768e0a552b3a02575a6df38a9bea",
+			"revisionTime": "2019-05-07T19:18:18Z"
+		},
+		{
+			"checksumSHA1": "EnMmNGgpDa5sNw0Zs5RhvNDcP2g=",
+			"path": "github.com/lib/pq/hstore",
+			"revision": "2ff3cb3adc01768e0a552b3a02575a6df38a9bea",
+			"revisionTime": "2019-05-07T19:18:18Z"
+		},
+		{
+			"checksumSHA1": "AU3fA8Sm33Vj9PBoRPSeYfxLRuE=",
+			"path": "github.com/lib/pq/oid",
+			"revision": "2ff3cb3adc01768e0a552b3a02575a6df38a9bea",
+			"revisionTime": "2019-05-07T19:18:18Z"
+		},
+		{
+			"checksumSHA1": "ywel3wHXnu1eLhyT1/FolporeAc=",
+			"path": "github.com/lib/pq/scram",
+			"revision": "2ff3cb3adc01768e0a552b3a02575a6df38a9bea",
+			"revisionTime": "2019-05-07T19:18:18Z"
 		},
 		{
 			"checksumSHA1": "74gCzvJiE6bXX3i4vIVCYhffDHc=",

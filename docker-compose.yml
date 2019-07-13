@@ -8,3 +8,80 @@ services:
       command: rauthservice
       environment:
         - SERVICE_NAME=rauthservice
+    rcrudservice:
+      build:
+        context: .
+        dockerfile: Dockerfile
+      command: rcrudservice
+      environment:
+        - SERVICE_NAME=rcrudservice
+    rgameservice:
+      build:
+        context: .
+        dockerfile: Dockerfile
+      command: rgameservice
+      environment:
+        - SERVICE_NAME=rgameservice
+    rwebservice:
+      build:
+        context: .
+        dockerfile: Dockerfile
+      command: rwebservice
+      environment:
+        - SERVICE_NAME=rwebservice
+    sauthservice:
+      build:
+        context: .
+        dockerfile: Dockerfile
+      command: sauthservice
+      environment:
+        - SERVICE_NAME=sauthservice
+    schatservice:
+      build:
+        context: .
+        dockerfile: Dockerfile
+      command: schatservice
+      environment:
+        - SERVICE_NAME=schatservice
+    sglobalservice:
+      build:
+        context: .
+        dockerfile: Dockerfile
+      command: sglobalservice
+      environment:
+        - SERVICE_NAME=sglobalservice
+    swebservice:
+      build:
+        context: .
+        dockerfile: Dockerfile
+      command: swebservice
+      environment:
+        - SERVICE_NAME=swebservice
+    wauthservice:
+      build:
+        context: .
+        dockerfile: Dockerfile
+      command: wauthservice
+      environment:
+        - SERVICE_NAME=wauthservice
+    wgameservice:
+      build:
+        context: .
+        dockerfile: Dockerfile
+      command: wgameservice
+      environment:
+        - SERVICE_NAME=wgameservice
+    wglobalservice:
+      build:
+        context: .
+        dockerfile: Dockerfile
+      command: wglobalservice
+      environment:
+        - SERVICE_NAME=wglobalservice
+    wwebservice:
+      build:
+        context: .
+        dockerfile: Dockerfile
+      command: wwebservice
+      environment:
+        - SERVICE_NAME=wwebservice

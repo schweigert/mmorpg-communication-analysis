@@ -1,125 +1,135 @@
 version: '3.5'
 
 services:
-    rauthservice:
-      build:
-        context: .
-        dockerfile: Dockerfile
-      command: rauthservice
-      environment:
-        - PORT=3000
-        - SERVICE_NAME=rauthservice
-      ports:
-        - 3000:3000
-    rcrudservice:
-      build:
-        context: .
-        dockerfile: Dockerfile
-      command: rcrudservice
-      environment:
-        - PORT=3001
-        - SERVICE_NAME=rcrudservice
-      ports:
-        - 3001:3001
-    rgameservice:
-      build:
-        context: .
-        dockerfile: Dockerfile
-      command: rgameservice
-      environment:
-        - PORT=3002
-        - SERVICE_NAME=rgameservice
-      ports:
-        - 3002:3002
-    rwebservice:
-      build:
-        context: .
-        dockerfile: Dockerfile
-      command: rwebservice
-      environment:
-        - PORT=3003
-        - SERVICE_NAME=rwebservice
-      ports:
-        - 3003:3003
+  postgres:
+    image: postgres:9.6
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_DB=test
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - TZ=GMT
 
-    sauthservice:
-      build:
-        context: .
-        dockerfile: Dockerfile
-      command: sauthservice
-      environment:
-        - PORT=3004
-        - SERVICE_NAME=sauthservice
-      ports:
-        - 3004:3004
-    schatservice:
-      build:
-        context: .
-        dockerfile: Dockerfile
-      command: schatservice
-      environment:
-        - PORT=3005
-        - SERVICE_NAME=schatservice
-      ports:
-        - 3005:3005
-    sglobalservice:
-      build:
-        context: .
-        dockerfile: Dockerfile
-      command: sglobalservice
-      environment:
-        - PORT=3006
-        - SERVICE_NAME=sglobalservice
-      ports:
-        - 3006:3006
-    swebservice:
-      build:
-        context: .
-        dockerfile: Dockerfile
-      command: swebservice
-      environment:
-        - PORT=3007
-        - SERVICE_NAME=swebservice
-      ports:
-        - 3007:3007
+  rauthservice:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: rauthservice
+    environment:
+      - PORT=3000
+      - SERVICE_NAME=rauthservice
+    ports:
+      - 3000:3000
+  rcrudservice:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: rcrudservice
+    environment:
+      - PORT=3001
+      - SERVICE_NAME=rcrudservice
+    ports:
+      - 3001:3001
+  rgameservice:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: rgameservice
+    environment:
+      - PORT=3002
+      - SERVICE_NAME=rgameservice
+    ports:
+      - 3002:3002
+  rwebservice:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: rwebservice
+    environment:
+      - PORT=3003
+      - SERVICE_NAME=rwebservice
+    ports:
+      - 3003:3003
 
-    wauthservice:
-      build:
-        context: .
-        dockerfile: Dockerfile
-      command: wauthservice
-      environment:
-        - PORT=3008
-        - SERVICE_NAME=wauthservice
-      ports:
-        - 3008:3008
-    wgameservice:
-      build:
-        context: .
-        dockerfile: Dockerfile
-      command: wgameservice
-      environment:
-        - PORT=3009
-        - SERVICE_NAME=wgameservice
-      ports:
-        - 3009:3009
-    wglobalservice:
-      build:
-        context: .
-        dockerfile: Dockerfile
-      command: wglobalservice
-      environment:
-        - PORT=3010
-        - SERVICE_NAME=wglobalservice
-      ports:
-        - 3010:3010
-    wwebservice:
-      build:
-        context: .
-        dockerfile: Dockerfile
-      command: wwebservice
-      environment:
-        - PORT=3011
-        - SERVICE_NAME=wwebservice
-      ports:
-        - 3011:3011
+  sauthservice:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: sauthservice
+    environment:
+      - PORT=3004
+      - SERVICE_NAME=sauthservice
+    ports:
+      - 3004:3004
+  schatservice:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: schatservice
+    environment:
+      - PORT=3005
+      - SERVICE_NAME=schatservice
+    ports:
+      - 3005:3005
+  sglobalservice:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: sglobalservice
+    environment:
+      - PORT=3006
+      - SERVICE_NAME=sglobalservice
+    ports:
+      - 3006:3006
+  swebservice:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: swebservice
+    environment:
+      - PORT=3007
+      - SERVICE_NAME=swebservice
+    ports:
+      - 3007:3007
+
+  wauthservice:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: wauthservice
+    environment:
+      - PORT=3008
+      - SERVICE_NAME=wauthservice
+    ports:
+      - 3008:3008
+  wgameservice:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: wgameservice
+    environment:
+      - PORT=3009
+      - SERVICE_NAME=wgameservice
+    ports:
+      - 3009:3009
+  wglobalservice:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: wglobalservice
+    environment:
+      - PORT=3010
+      - SERVICE_NAME=wglobalservice
+    ports:
+      - 3010:3010
+  wwebservice:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: wwebservice
+    environment:
+      - PORT=3011
+      - SERVICE_NAME=wwebservice
+    ports:
+      - 3011:3011

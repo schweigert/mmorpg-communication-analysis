@@ -4,7 +4,8 @@ import "github.com/gin-gonic/gin"
 
 // Routes
 const (
-	RootRoute = "/"
+	RootRoute    = "/"
+	AccountRoute = "/account"
 )
 
 // Routes include *Route consts
@@ -22,7 +23,7 @@ func NewServer() (server *Server) {
 
 // NewWillsonServer constructor
 func NewWillsonServer() *WillsonServer {
-	server := NewServer()
-
-	return &WillsonServer{Server: server}
+	server := &WillsonServer{Server: NewServer()}
+	server.Setup()
+	return server
 }

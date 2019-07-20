@@ -12,5 +12,6 @@ type AccountRepository struct {
 
 // Create an account instance
 func (repository *AccountRepository) Create(account *models.Account) bool {
-	return noErrors(repository.db.Create(account).GetErrors())
+	repository.db.Create(account)
+	return !repository.db.NewRecord(account)
 }

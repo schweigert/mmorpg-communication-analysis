@@ -27,18 +27,10 @@ func (suite *PackageSuite) TestRoutes() {
 	}
 }
 
-func (suite *PackageSuite) TestNewServer() {
-	server := NewServer()
+func (suite *PackageSuite) TestNewWServer() {
+	server := NewWServer()
 
 	suite.NotNil(server)
-	suite.NotNil(server.engine)
-}
-
-func (suite *PackageSuite) TestNewWillsonServer() {
-	server := NewWillsonServer()
-
-	suite.NotNil(server)
-	suite.NotNil(server.Server)
 	suite.NotNil(server.engine)
 }
 

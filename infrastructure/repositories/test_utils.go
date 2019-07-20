@@ -2,6 +2,7 @@ package repositories
 
 // ClearDB USE ONLY ON TESTS
 func ClearDB() {
-	defer migrate()
+	migrate()
 	db.DropTableIfExists(availableModels()...)
+	migrate()
 }

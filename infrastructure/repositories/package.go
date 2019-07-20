@@ -18,10 +18,6 @@ func init() {
 	ternary.Func(err != nil, func() { panic(err) }, func() { db.LogMode(true) })()
 }
 
-func noErrors(errors []error) bool {
-	return errors == nil || len(errors) == 0
-}
-
 func availableModels() []interface{} {
 	list := []interface{}{}
 

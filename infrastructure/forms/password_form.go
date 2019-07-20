@@ -4,3 +4,8 @@ package forms
 type PasswordForm struct {
 	Password string `json:"password"`
 }
+
+// Valid form
+func (form *PasswordForm) Valid() bool {
+	return len(form.Password) > 8
+}

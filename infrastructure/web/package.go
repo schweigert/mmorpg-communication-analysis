@@ -1,6 +1,9 @@
 package web
 
-import "github.com/gin-gonic/gin"
+import (
+	"github.com/gin-gonic/gin"
+	"github.com/schweigert/mmorpg-communication-analysis/infrastructure/repositories"
+)
 
 // Routes
 const (
@@ -13,17 +16,14 @@ var Routes = []string{
 	RootRoute,
 }
 
-// NewServer constructor
-func NewServer() (server *Server) {
-	ginEngine := gin.Default()
-	server = &Server{engine: ginEngine}
-	server.Setup()
-	return server
+func init() {
+	gin.SetMode(gin.ReleaseMode)
 }
 
-// NewWillsonServer constructor
-func NewWillsonServer() *WillsonServer {
-	server := &WillsonServer{Server: NewServer()}
+// NewWServer constructor
+func NewWServer() (server *WServer) {
+	ginEngine := gin.Default()
+	server = &WServer{engine: ginEngine, accountRepository: repositories.NewAccountRepository()}
 	server.Setup()
 	return server
 }

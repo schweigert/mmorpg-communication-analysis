@@ -141,6 +141,24 @@
 			"revisionTime": "2018-07-18T01:23:57Z"
 		},
 		{
+			"checksumSHA1": "EVWOLwI0wsRAxvD3L9dMjA/JRHU=",
+			"path": "github.com/moul/http2curl",
+			"revision": "47c06e753c699ec2871aa3e2c209a8adff67e0f3",
+			"revisionTime": "2019-06-11T21:16:36Z"
+		},
+		{
+			"checksumSHA1": "UmYMPKuYIY/PPRYaixh8FuR0X64=",
+			"path": "github.com/parnurzeal/gorequest",
+			"revision": "a578a48e8d6ca8b01a3b18314c43c6716bb5f5a3",
+			"revisionTime": "2017-02-20T17:20:57Z"
+		},
+		{
+			"checksumSHA1": "I7hloldMJZTqUx6hbVDp5nk9fZQ=",
+			"path": "github.com/pkg/errors",
+			"revision": "27936f6d90f9c8e1145f11ed52ffffbfdb9e0af7",
+			"revisionTime": "2019-02-27T00:00:51Z"
+		},
+		{
 			"checksumSHA1": "LuFv4/jlrmFNnDb/5SCSEPAM9vU=",
 			"path": "github.com/pmezard/go-difflib/difflib",
 			"revision": "5d4384ee4fb2527b0a1256a821ebfc92f91efefc",
@@ -169,6 +187,12 @@
 			"path": "github.com/ugorji/go/codec",
 			"revision": "87e7426fb3c27c1b108346411a826ae287dfc835",
 			"revisionTime": "2019-07-10T13:58:03Z"
+		},
+		{
+			"checksumSHA1": "cuxgypk6P0Do5kGBX8nIM/Vjy6M=",
+			"path": "golang.org/x/net/publicsuffix",
+			"revision": "da137c7871d730100384dbcf36e6f8fa493aef5b",
+			"revisionTime": "2019-06-28T18:40:41Z"
 		},
 		{
 			"checksumSHA1": "A8UEhcUz0g3AzE9AcAQG+Tp2w10=",

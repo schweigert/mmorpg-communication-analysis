@@ -4,16 +4,14 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/schweigert/mmorpg-communication-analysis/edge/models"
-
-	"github.com/schweigert/mmorpg-communication-analysis/infrastructure/repositories"
-
-	"github.com/krakenlab/ternary"
-	"github.com/schweigert/mmorpg-communication-analysis/infrastructure/forms"
-
 	"github.com/gin-gonic/gin"
+	"github.com/krakenlab/ternary"
+
+	"github.com/schweigert/mmorpg-communication-analysis/edge/models"
 	"github.com/schweigert/mmorpg-communication-analysis/infrastructure/env"
 	"github.com/schweigert/mmorpg-communication-analysis/infrastructure/envbuilder"
+	"github.com/schweigert/mmorpg-communication-analysis/infrastructure/forms"
+	"github.com/schweigert/mmorpg-communication-analysis/infrastructure/repositories"
 )
 
 // WServer create a default structure for all webservices

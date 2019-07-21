@@ -3,5 +3,5 @@ package main
 import "github.com/schweigert/mmorpg-communication-analysis/infrastructure/web"
 
 func main() {
-	web.NewWillsonServer().Start()
+	web.NewWServer().Start()
 }

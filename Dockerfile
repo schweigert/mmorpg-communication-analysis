@@ -15,3 +15,5 @@ RUN go install github.com/schweigert/mmorpg-communication-analysis/infrastructur
 RUN go install github.com/schweigert/mmorpg-communication-analysis/infrastructure/services/wgameservice
 RUN go install github.com/schweigert/mmorpg-communication-analysis/infrastructure/services/wglobalservice
 RUN go install github.com/schweigert/mmorpg-communication-analysis/infrastructure/services/wwebservice
+
+RUN go install github.com/schweigert/mmorpg-communication-analysis/clients/wclient

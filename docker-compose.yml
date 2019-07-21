@@ -142,3 +142,14 @@ services:
       - POSTGRES_PASSWORD=postgres
     ports:
       - 3011:3011
+
+  wclient:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - wwebservice
+    command: wclient
+    environment:
+      - W_WEB_SERVICE_HOST=wwebservice
+      - W_WEB_SERVICE_PORT=3011

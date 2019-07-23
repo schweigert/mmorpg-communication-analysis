@@ -6,6 +6,7 @@ import (
 	"testing"
 
 	"github.com/schweigert/mmorpg-communication-analysis/infrastructure/env"
+	"github.com/schweigert/mmorpg-communication-analysis/infrastructure/web/routes"
 
 	"github.com/krakenlab/gspec"
 	"github.com/krakenlab/gspec/websuite"
@@ -33,7 +34,7 @@ func (suite *WServerTest) TestStart() {
 }
 
 func (suite *WServerTest) TestGetRootHandler() {
-	response := suite.WebSuite.GET(RootRoute, "")
+	response := suite.WebSuite.GET(routes.RootRoute, "")
 	body := response.Body.String()
 
 	suite.Equal(http.StatusOK, response.Code)
@@ -43,12 +44,12 @@ func (suite *WServerTest) TestGetRootHandler() {
 }
 
 func (suite *WServerTest) TestPutAccountHandler() {
-	response := suite.WebSuite.PUT(AccountRoute, `{"username": "aa", "password": "aaa"}`)
+	response := suite.WebSuite.PUT(routes.AccountRoute, `{"username": "aa", "password": "aaa"}`)
 	body := response.Body.String()
 	suite.Equal(http.StatusInternalServerError, response.Code)
 	suite.Contains(body, "Invalid Request")
 
-	response = suite.WebSuite.PUT(AccountRoute, `{"username": "this_a_test", "password": "this_a_super_test"}`)
+	response = suite.WebSuite.PUT(routes.AccountRoute, `{"username": "this_a_test", "password": "this_a_super_test"}`)
 	body = response.Body.String()
 	suite.Equal(http.StatusOK, response.Code)
 	suite.Contains(body, "this_a_test")

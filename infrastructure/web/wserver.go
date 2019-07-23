@@ -12,6 +12,7 @@ import (
 	"github.com/schweigert/mmorpg-communication-analysis/infrastructure/envbuilder"
 	"github.com/schweigert/mmorpg-communication-analysis/infrastructure/forms"
 	"github.com/schweigert/mmorpg-communication-analysis/infrastructure/repositories"
+	"github.com/schweigert/mmorpg-communication-analysis/infrastructure/web/routes"
 )
 
 // WServer create a default structure for all webservices
@@ -23,8 +24,8 @@ type WServer struct {
 
 // Setup root route in this Wserver
 func (wserver *WServer) Setup() {
-	wserver.engine.GET(RootRoute, wserver.GetRootHandler)
-	wserver.engine.PUT(AccountRoute, wserver.PutAccountHandler)
+	wserver.engine.GET(routes.RootRoute, wserver.GetRootHandler)
+	wserver.engine.PUT(routes.AccountRoute, wserver.PutAccountHandler)
 }
 
 // Start this Wserver

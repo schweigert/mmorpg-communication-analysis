@@ -5,17 +5,6 @@ import (
 	"github.com/schweigert/mmorpg-communication-analysis/infrastructure/repositories"
 )
 
-// Routes
-const (
-	RootRoute    = "/"
-	AccountRoute = "/account"
-)
-
-// Routes include *Route consts
-var Routes = []string{
-	RootRoute,
-}
-
 func init() {
 	gin.SetMode(gin.ReleaseMode)
 }

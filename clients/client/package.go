@@ -4,6 +4,9 @@ import (
 	"fmt"
 	"strings"
 
+	"github.com/schweigert/mmorpg-communication-analysis/infrastructure/forms"
+
+	"github.com/schweigert/mmorpg-communication-analysis/edge/models"
 	"github.com/schweigert/mmorpg-communication-analysis/edge/password"
 
 	"github.com/dmgk/faker"
@@ -14,6 +17,8 @@ var (
 	Username       string
 	Password       string
 	SecurePassword string
+
+	Account *models.Account
 )
 
 // FillPersonalData into variables
@@ -21,6 +26,11 @@ func FillPersonalData() {
 	Username = RandomUsername()
 	Password = RandomPassword()
 	SecurePassword = password.Sum(Password)
+}
+
+// CredentialForm based in filled personal data
+func CredentialForm() *forms.CredentialForm {
+	return &forms.CredentialForm{Username: Username, Password: Password}
 }
 
 // RandomUsername to create an account

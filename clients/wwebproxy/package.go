@@ -34,7 +34,7 @@ func wWebServiceAccountURL() string {
 }
 
 func wWebServiceURL() string {
-	return fmt.Sprintf("%s:%s", wWebServiceHost(), wWebServicePort())
+	return fmt.Sprintf("http://%s:%s", wWebServiceHost(), wWebServicePort())
 }
 
 func wWebServicePort() string {

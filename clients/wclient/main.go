@@ -1,8 +1,6 @@
 package main
 
 import (
-	"time"
-
 	"github.com/krakenlab/ternary"
 	"github.com/schweigert/mmorpg-communication-analysis/clients/client"
 	"github.com/schweigert/mmorpg-communication-analysis/clients/wwebproxy"
@@ -13,16 +11,15 @@ func init() {
 }
 
 func main() {
-	time.Sleep(5 * time.Second)
-	tryCreateAccount()
+	createAccount()
 }
 
-func tryCreateAccount() {
+func createAccount() {
 	client.FillPersonalData()
 	form := client.CredentialForm()
 
 	var err error
 
 	client.Account, err = wwebproxy.CreateAccount(form)
-	ternary.Func(err == nil, func() {}, tryCreateAccount)()
+	ternary.Func(err == nil, func() {}, createAccount)()
 }

@@ -27,6 +27,16 @@ func (suite *AccountRepositorySuite) TestCreate() {
 	suite.Equal(1, count)
 }
 
+func (suite *AccountRepositorySuite) TestFirstWhere() {
+	account := models.NewAccount("username", "password")
+	suite.True(NewAccountRepository().Create(account))
+
+	otherAccount, ok := NewAccountRepository().FirstWhere("username = ?", account.Username)
+
+	suite.True(ok)
+	suite.Equal(account.Password, otherAccount.Password)
+}
+
 func TestAccountRepositorySuite(t *testing.T) {
 	gspec.Run(t, new(AccountRepositorySuite))
 }

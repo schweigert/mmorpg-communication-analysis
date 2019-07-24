@@ -15,3 +15,11 @@ func (repository *AccountRepository) Create(account *models.Account) bool {
 	repository.db.Create(account)
 	return !repository.db.NewRecord(account)
 }
+
+// FirstWhere element
+func (repository *AccountRepository) FirstWhere(query interface{}, args ...interface{}) (*models.Account, bool) {
+	account := models.NewAccount("", "")
+	repository.db.Where(query, args...).First(account)
+
+	return account, !repository.db.NewRecord(account)
+}

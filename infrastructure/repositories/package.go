@@ -16,6 +16,7 @@ func init() {
 	var err error
 	db, err = gorm.Open("postgres", envbuilder.PostgresAddr())
 	ternary.Func(err != nil, func() { panic(err) }, func() { db.LogMode(true) })()
+	db.Set("gorm:auto_preload", true)
 }
 
 func availableModels() []interface{} {

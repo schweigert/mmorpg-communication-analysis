@@ -70,3 +70,15 @@ func (wserver *WServer) PutAccountHandler(c *gin.Context) {
 		)
 	}
 }
+
+// PutCharacterHandler function
+func (wserver *WServer) PutCharacterHandler(c *gin.Context) {
+	form := &forms.CredentialForm{}
+
+	if wserver.BindForm(c, form) == nil && form.Valid() {
+		account, ok := wserver.accountRepository.FirstWhere("username = ?", form.Username)
+		if ok && account.Username == form.Username && account.Password == account.Password {
+
+		}
+	}
+}

@@ -12,7 +12,11 @@ type AccountRepository struct {
 
 // Create an account instance
 func (repository *AccountRepository) Create(account *models.Account) bool {
-	repository.db.Create(account)
+	_, ok := repository.FirstWhere("username = ?", account.Username)
+	if !ok {
+		repository.db.Create(account)
+	}
+
 	return !repository.db.NewRecord(account)
 }
 

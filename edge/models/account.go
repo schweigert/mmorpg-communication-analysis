@@ -11,6 +11,8 @@ type Account struct {
 
 	Username string
 	Password string
+
+	Characters []Character
 }
 
 // ObfuscatePassword use Sum256 with sha256 package to obfuscate this password
